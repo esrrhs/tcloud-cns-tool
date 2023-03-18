@@ -6,7 +6,7 @@
 [<img src="https://img.shields.io/github/v/release/esrrhs/tcloud-cns-tool">](https://github.com/esrrhs/tcloud-cns-tool/releases)
 [<img src="https://img.shields.io/github/downloads/esrrhs/tcloud-cns-tool/total">](https://github.com/esrrhs/tcloud-cns-tool/releases)
 [<img src="https://img.shields.io/docker/pulls/esrrhs/tcloud-cns-tool">](https://hub.docker.com/repository/docker/esrrhs/tcloud-cns-tool)
-[<img src="https://img.shields.io/github/workflow/status/esrrhs/tcloud-cns-tool/Go">](https://github.com/esrrhs/tcloud-cns-tool/actions)
+[<img src="https://img.shields.io/github/actions/workflow/status/esrrhs/tcloud-cns-tool/go.yml?branch=master">](https://github.com/esrrhs/tcloud-cns-tool/actions)
 
 腾讯云-域名解析-查询设置-工具，
 代码修改自[tcloud-cns](https://github.com/sjatsh/tcloud-cns)
