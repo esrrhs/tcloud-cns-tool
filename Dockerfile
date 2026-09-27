@@ -1,9 +1,12 @@
-FROM golang AS build-env
+FROM golang:1.27.1-bookworm AS build
 
-RUN GO111MODULE=off go get -u github.com/esrrhs/tcloud-cns-tool
-RUN GO111MODULE=off go get -u github.com/esrrhs/tcloud-cns-tool/...
-RUN GO111MODULE=off go install github.com/esrrhs/tcloud-cns-tool
+WORKDIR /src
+COPY go.mod ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /out/tcloud-cns-tool .
 
-FROM debian
-COPY --from=build-env /go/bin/tcloud-cns-tool .
-WORKDIR ./
+FROM debian:bookworm-slim
+WORKDIR /app
+COPY --from=build /out/tcloud-cns-tool ./tcloud-cns-tool
+ENTRYPOINT ["./tcloud-cns-tool"]

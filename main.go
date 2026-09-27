@@ -16,8 +16,14 @@ func main() {
 	name := flag.String("name", "", "set name")
 	value := flag.String("value", "", "set value")
 	settype := flag.String("type", "A", "set type")
+	showVersion := flag.Bool("version", false, "print version")
 
 	flag.Parse()
+
+	if *showVersion {
+		log.Printf("tcloud-cns-tool %s", Version)
+		return
+	}
 
 	if *secretId == "" || *secretKey == "" || *domain == "" {
 		flag.Usage()

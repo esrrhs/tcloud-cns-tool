@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 	"time"
@@ -69,12 +68,11 @@ func (cli *Client) request(method, action string, param url.Values, body io.Read
 		}
 	}()
 
-	respData, err := ioutil.ReadAll(resp.Body)
+	respData, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
-	str := string(respData)
-	if err := json.Unmarshal([]byte(str), respInfo); err != nil {
+	if err := json.Unmarshal(respData, respInfo); err != nil {
 		return err
 	}
 	return nil

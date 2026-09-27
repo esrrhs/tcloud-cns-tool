@@ -2,7 +2,6 @@
 
 [<img src="https://img.shields.io/github/license/esrrhs/tcloud-cns-tool">](https://github.com/esrrhs/tcloud-cns-tool)
 [<img src="https://img.shields.io/github/languages/top/esrrhs/tcloud-cns-tool">](https://github.com/esrrhs/tcloud-cns-tool)
-[![Go Report Card](https://goreportcard.com/badge/github.com/esrrhs/tcloud-cns-tool)](https://goreportcard.com/report/github.com/esrrhs/tcloud-cns-tool)
 [<img src="https://img.shields.io/github/v/release/esrrhs/tcloud-cns-tool">](https://github.com/esrrhs/tcloud-cns-tool/releases)
 [<img src="https://img.shields.io/github/downloads/esrrhs/tcloud-cns-tool/total">](https://github.com/esrrhs/tcloud-cns-tool/releases)
 [<img src="https://img.shields.io/docker/pulls/esrrhs/tcloud-cns-tool">](https://hub.docker.com/repository/docker/esrrhs/tcloud-cns-tool)

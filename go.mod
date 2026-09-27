@@ -1,3 +1,3 @@
 module github.com/esrrhs/tcloud-cns-tool
 
-go 1.19
+go 1.27.1

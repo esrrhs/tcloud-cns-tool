@@ -29,7 +29,7 @@ func signature(param url.Values, reqMethod, addr, secretKey, sigMethod string) s
 			value = values[0]
 		}
 
-		key = strings.Replace(key, "_", ".", -1)
+		key = strings.ReplaceAll(key, "_", ".")
 
 		strs = append(strs, key+"="+value)
 	}
